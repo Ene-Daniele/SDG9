@@ -1,9 +1,45 @@
 body{
     background-color: rgba(0, 0, 0, 0.85);
 }
-div.upper{
-    background-color: rgba(80, 80, 80, 0.85);
+html{
+    overflow-x: hidden;
 }
-img.background{
+section.container{
     
+    padding-top: 10px;
+    display: grid;
+    gap: 1rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+    grid-template-rows: repeat(12, 40%);
+}
+
+div.card{
+    color: white;
+    padding: 50px;
+    border: 1px solid red;
+}
+div.card:hover{
+    position: relative;
+    background-color: red;
+    animation-duration: 0.4s;
+    animation-name: zoomin;
+}
+
+@keyframes zoomin {
+    from {
+      top: 0px;
+    }
+  
+    to {
+      top: -5px;
+    }
+  }
+
+.card-tall{
+    grid-row: span 2 / auto;
+}
+.card-wide{
+    grid-column: span 2 / auto;
 }
