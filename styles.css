@@ -1,12 +1,12 @@
 body{
-    background-color: rgba(0, 0, 0, 0.85); /* Gray-ish background */
-    background-image: url("bgs/bg0.jpg"); /* Initial background */
-    background-repeat: no-repeat; /* Dont repeat the background image when scrolling */
-    background-size:cover; /* Make the background image cover all the screen */
-    background-attachment: fixed; /* Lock the background image in place */
+    background-color: rgba(0, 0, 0, 0.85); 
+    background-image: url("bgs/bg0.jpg"); 
+    background-repeat: no-repeat; 
+    background-size:cover; 
+    background-attachment: fixed; 
 }
 html{
-    overflow-x: hidden; /* Prevent horizontal scrolling simply because it looks ugly if it ever is possible, just a preventive measure */
+    overflow-x: hidden; 
 }
 .two{
     grid-column: span 2 / auto;
@@ -41,39 +41,36 @@ html{
 .twelve{
     grid-column: span 12 / auto;
 }
-section{
-    display: grid; /* We need sections to be responsive */
-    gap: 1rem; /* The distance should be 1rem */
-    grid-template-columns: repeat(12, minmax(30px, 80px)); /* Set the template columns to as many objects as we can fit */
-}
 .top{
-    margin-top: -10px; /* These 3 margins are to cover up the top part, to make it look like its on top of everything */
-    background-color: rgba(62, 62, 62, 0.85); /* Make this a slightly brighter gray than the background */
-    padding-top: 1%; /* The padding here is just to center it better */
-    align-items: center; /* Centering elements */
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    background-color: rgba(62, 62, 62, 0.85); 
+    padding-top: 1%;
+    align-items: center; 
     text-align: center;
-    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5); /* Some shadow to the whole div, taken (stolen) from stackoverflow */
-    min-height: 50%; /* We dont want it to shrink too much on mobile screens */
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5); 
+    min-height: 50%; 
 }
 button.nav{
-    margin-left: 10px; /* Just centering better, i made a mess of centering these buttons */
+    margin-left: 10px;
     width: 60px;
-    color: white; /* 🤍 */
-    background-color: rgba(0, 0, 0, 0); /* No background */
-    border-style: none; /* No border */
-    user-select: none; /* And no select either */
+    color: white; 
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none; 
+    user-select: none; 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
-    border-bottom: 3px solid rgba(255, 0, 0, 0.70); /* Cool little effect under the button */
+    border-bottom: 3px solid rgba(255, 0, 0, 0.70); 
 }
-button.nav:hover{ /* :hover 🙏 */
-    color: darkgray; /* Make it look like we can press it */
-    border-bottom-color: rgba(94, 255, 0, 0.7); /* Change the botton color aswell */
-    animation-duration: 0.5s; /* Cool animation to make the changes slowly fade in */
+button.nav:hover{ 
+    color: darkgray; 
+    border-bottom-color: rgba(94, 255, 0, 0.7); 
+    animation-duration: 0.5s; 
     animation-name: colorpan;
-    transform: translateY(5px); /* Move it down by 5px */
+    transform: translateY(5px); 
 }
-@keyframes colorpan{ /* Animation */
+@keyframes colorpan{ 
     from{
         transform: translateY(0);
         color: white;
@@ -86,10 +83,10 @@ button.nav:hover{ /* :hover 🙏 */
    }
 }
 img.icon{
-    -webkit-user-drag: none; /* Disable dragging (doesnt work) */
-    user-select: none; /* Selecting elements is ugly */
+    -webkit-user-drag: none; 
+    user-select: none; 
 }
-img.icon:hover{ /** Spin!!! */
+img.icon:hover{ 
     animation-duration: 1s;
     animation-name: rot;
 }
@@ -101,15 +98,15 @@ img.icon:hover{ /** Spin!!! */
         transform: rotate(360deg);
    }
 }
-p{ /* Main paragraph */
-    user-select: none; /* No select. again */
-    text-align: right; /* Align it to the right */
-    color: white; /* 🤍 */
+p{
+    user-select: none; 
+    text-align: right; 
+    color: white; 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
-    text-shadow: 2px 2px rgba(255, 0, 0, 0.7); /* Thanks stackoverflow */
+    text-shadow: 2px 2px rgba(255, 0, 0, 0.7); 
 }
-h1{ /*? I wont comment over the same lines */
+h1{
     text-shadow:5px 5px rgba(200, 0, 90, 0.5);
     user-select: none;
     color: rgb(255, 247, 189);
@@ -119,23 +116,30 @@ h1{ /*? I wont comment over the same lines */
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-section.contentwrapper{ /* As i said */
+section.contentwrapper{ 
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(12, minmax(30px, 400px));
+        grid-template-columns: repeat(12, minmax(10px, 400px));
     align-items: center;
     text-align: center;
+    justify-content: center;
 }
 div.text{
-    min-width: 300px;
-    max-width: 600px;
+    grid-column-start: 2;
+    grid-column-end: 7;
 }
-div.titler{ /* Questionable class name */
+div.titler{
+    border-radius: 20px;
+    border: 5px solid rgba(136, 136, 136, 0.425);
+    border-style:double;
+    background-color: rgba(114, 114, 114, 0.274);
+    display:flex;
     min-width: 300px;
     align-items: center;
+    justify-content: center;
     text-align: center;
 }
-h1.thinger{
+.thinger{
     text-shadow: 0px 0px rgba(0, 0, 0, 0);
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -145,7 +149,14 @@ h1.thinger{
     text-align: left;
 }
 div.card{
-    width: minmax(300px, 400px); /* Im not exactly sure why i put this here but this thing barely keeps itself together so i wont bother */
-    border: 5px solid red;
-    background-color: rgba(126, 126, 126, 0.3);
+    width: minmax(300px, 400px);
+}
+@media screen and (max-width: 962px) {
+    div.text{
+        grid-column-start: 0;
+        grid-column-end: 12;
+    }
+}
+@media screen and (max-width: 601px) {
+    
 }
