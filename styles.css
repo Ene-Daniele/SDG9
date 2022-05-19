@@ -8,38 +8,63 @@ body{
 html{
     overflow-x: hidden; /* Prevent horizontal scrolling simply because it looks ugly if it ever is possible, just a preventive measure */
 }
+.two{
+    grid-column: span 2 / auto;
+}
+.three{
+    grid-column: span 3 / auto;
+}
+.four{
+    grid-column: span 4 / auto;
+}
+.five{
+    grid-column: span 5 / auto;
+}
+.six{
+    grid-column: span 6 / auto;
+}
+.seven{
+    grid-column: span 7 / auto;
+}
+.eight{
+    grid-column: span 8 / auto;
+}
+.nine{
+    grid-column: span 9 / auto;
+}
+.ten{
+    grid-column: span 10 / auto;
+}
+.eleven{
+    grid-column: span 11 / auto;
+}
+.twelve{
+    grid-column: span 12 / auto;
+}
 section{
     display: grid; /* We need sections to be responsive */
     gap: 1rem; /* The distance should be 1rem */
-    grid-template-columns: repeat(auto-fit, minmax(30px, 80px)); /* Set the template columns to as many objects as we can fit */
-    grid-template-rows: repeat(4, 40%); /* The same thing but for rows, this is actually pretty useless for the top buttons and it will later reveal to be a nuisance */
+    grid-template-columns: repeat(12, minmax(30px, 80px)); /* Set the template columns to as many objects as we can fit */
 }
-section.top{
+.top{
     margin-top: -10px; /* These 3 margins are to cover up the top part, to make it look like its on top of everything */
-    margin-left: -135px;
-    margin-right: -100px;
     background-color: rgba(62, 62, 62, 0.85); /* Make this a slightly brighter gray than the background */
     padding-top: 1%; /* The padding here is just to center it better */
-    padding-left: 50px;
     align-items: center; /* Centering elements */
-    justify-content: center;
+    text-align: center;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5); /* Some shadow to the whole div, taken (stolen) from stackoverflow */
     min-height: 50%; /* We dont want it to shrink too much on mobile screens */
 }
 button.nav{
-    margin-left: 50px; /* Just centering better, i made a mess of centering these buttons */
-    position: relative; /* Just so its esier to center... theres probably a better way of centering all this but i cant be asked */
-    top: 30px;
-    max-width: 30%; /* really no reason not to use minmax() here but whatever */
-    min-width: 60px;
+    margin-left: 10px; /* Just centering better, i made a mess of centering these buttons */
+    width: 60px;
     color: white; /* 🤍 */
     background-color: rgba(0, 0, 0, 0); /* No background */
     border-style: none; /* No border */
     user-select: none; /* And no select either */
-    padding-bottom: 0.5%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
-    border-bottom: 3px solid rgba(255, 0, 0, 0.70); /* COol little effect under the button */
+    border-bottom: 3px solid rgba(255, 0, 0, 0.70); /* Cool little effect under the button */
 }
 button.nav:hover{ /* :hover 🙏 */
     color: darkgray; /* Make it look like we can press it */
@@ -61,10 +86,8 @@ button.nav:hover{ /* :hover 🙏 */
    }
 }
 img.icon{
-    -webkit-user-drag: none; /* Disable draggin (doesnt work) */
+    -webkit-user-drag: none; /* Disable dragging (doesnt work) */
     user-select: none; /* Selecting elements is ugly */
-    position: relative; /* It was in a weird position so we are manually moving it */
-    left: 120px;
 }
 img.icon:hover{ /** Spin!!! */
     animation-duration: 1s;
@@ -89,7 +112,6 @@ p{ /* Main paragraph */
 h1{ /*? I wont comment over the same lines */
     text-shadow:5px 5px rgba(200, 0, 90, 0.5);
     user-select: none;
-    padding-left: 20px;
     color: rgb(255, 247, 189);
     font-size: 30px;
     min-width: 300px;
@@ -100,11 +122,9 @@ h1{ /*? I wont comment over the same lines */
 section.contentwrapper{ /* As i said */
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(30px, 400px));
-    grid-template-rows: repeat(1, 100%);
-    width:auto; /* Adjust the width automatically */
+    grid-template-columns: repeat(12, minmax(30px, 400px));
     align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 div.text{
     min-width: 300px;
@@ -113,8 +133,7 @@ div.text{
 div.titler{ /* Questionable class name */
     min-width: 300px;
     align-items: center;
-    justify-content: center;
-    padding-left: 20px;
+    text-align: center;
 }
 h1.thinger{
     text-shadow: 0px 0px rgba(0, 0, 0, 0);
@@ -126,5 +145,7 @@ h1.thinger{
     text-align: left;
 }
 div.card{
-    width: fit-content; /* Im not exactly sure why i put this here but this thing barely keeps itself together so i wont bother */
+    width: minmax(300px, 400px); /* Im not exactly sure why i put this here but this thing barely keeps itself together so i wont bother */
+    border: 5px solid red;
+    background-color: rgba(126, 126, 126, 0.3);
 }
