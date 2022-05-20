@@ -2,17 +2,17 @@
 
 function bone() { // Changing background and text contents
     document.getElementById("body").style.backgroundImage = "url(bgs/bg1.jpg)";
-    updateContent("Infrastructure", "Develop quality, reliable, sustainable and resilient infrastructure, including regional and transborder infrastructure, to support economic development and human well-being, with a focus on affordable and equitable access for all."); //* Funny text
+    updateContent("Infrastructure", "Develop quality, reliable, sustainable and resilient infrastructure, including regional and transborder infrastructure, to support economic development and human well-being, with a focus on affordable and equitable access for all. Infrastructure is often seen as a prerequisite to economic development and is even defined as the “basic physical and organizational structures and facilities (e.g. buildings, roads, power supplies) needed for the operation of a society or enterprise.” In other words, without infrastructure, the operation of a society or enterprise cannot happen. This underscores the importance of infrastructure investments. But infrastructure isn’t free, and it doesn’t come cheap. And in fact, many infrastructure projects."); //* Funny text
 }
 
 function btwo() {
     document.getElementById("body").style.backgroundImage = "url(bgs/bg2.jpg)";
-    updateContent("Industrialization", "Promote inclusive and sustainable industrialization and, by 2030, significantly raise industry’s share of employment and gross domestic product, in line with national circumstances, and double its share in least developed countries.");
+    updateContent("Industrialization", "Promote inclusive and sustainable industrialization and, by 2030, significantly raise industry’s share of employment and gross domestic product, in line with national circumstances, and double its share in least developed countries.Industrialization is the process by which an economy is transformed from a primarily agricultural one to one based on the manufacturing of goods. Individual manual labor is often replaced by mechanized mass production, and craftsmen are replaced by assembly lines.Examples of industrialization are manufacturing (1900s), mining (1930s), transportation (1950s), and retailing (1970s).");
 }
 
 function bthree() {
     document.getElementById("body").style.backgroundImage = "url(bgs/bg3.jpg)";
-    updateContent("Innovation", "Facilitate sustainable and resilient infrastructure development in developing countries through enhanced financial, technological and technical support to African countries, least developed countries, and landlocked developing countries.");
+    updateContent("Innovation", "Facilitate sustainable and resilient infrastructure development in developing countries through enhanced financial, technological and technical support to African countries, least developed countries, and landlocked developing countries.Innovation is defined as the process of making an idea or invention into a good or service that creates value and/or for which customers will pay. There are many different types of examples of innovation such as social innovation examples, incremental innovation examples and open innovation examples among others.");
 }
 
 function bfour() {
