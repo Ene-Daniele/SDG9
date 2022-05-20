@@ -8,39 +8,7 @@ body{
 html{
     overflow-x: hidden; 
 }
-.two{
-    grid-column: span 2 / auto;
-}
-.three{
-    grid-column: span 3 / auto;
-}
-.four{
-    grid-column: span 4 / auto;
-}
-.five{
-    grid-column: span 5 / auto;
-}
-.six{
-    grid-column: span 6 / auto;
-}
-.seven{
-    grid-column: span 7 / auto;
-}
-.eight{
-    grid-column: span 8 / auto;
-}
-.nine{
-    grid-column: span 9 / auto;
-}
-.ten{
-    grid-column: span 10 / auto;
-}
-.eleven{
-    grid-column: span 11 / auto;
-}
-.twelve{
-    grid-column: span 12 / auto;
-}
+
 .top{
     margin-top: -10px;
     margin-left: -10px;
@@ -107,14 +75,16 @@ p{
     text-shadow: 2px 2px rgba(255, 0, 0, 0.7); 
 }
 h1{
-    text-shadow:5px 5px rgba(200, 0, 90, 0.5);
+    text-shadow:5px 5px rgba(255, 0, 43, 0.315);
     user-select: none;
     color: rgb(255, 247, 189);
     font-size: 30px;
-    min-width: 300px;
-    max-width: 400px;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#ffs{
+    position: relative;
+    left: 15px;
 }
 section.contentwrapper{ 
     display: grid;
@@ -130,33 +100,87 @@ div.text{
 }
 div.titler{
     border-radius: 20px;
-    border: 5px solid rgba(136, 136, 136, 0.425);
-    border-style:double;
-    background-color: rgba(114, 114, 114, 0.274);
-    display:flex;
-    min-width: 300px;
+    border-bottom: 5px solid rgb(255, 56, 56);
+    border-top: 5px solid rgb(255, 56, 56);
+    background-color: rgba(0, 0, 0, 0.616);
     align-items: center;
     justify-content: center;
     text-align: center;
+    box-shadow: 0px 30px 100px 10px rgba(255, 0, 0, 0.5);
+    padding-top: 10px;
 }
 .thinger{
     text-shadow: 0px 0px rgba(0, 0, 0, 0);
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 60px;
-    max-width: 200px;
     color: rgba(255, 255, 255, 0.4);
     text-align: left;
+    position: relative;
+    left: 20px
 }
 div.card{
     width: minmax(300px, 400px);
 }
+.one{
+    grid-column: span 1 / auto;
+}
+.two{
+    grid-column: span 2 / auto;
+}
+.three{
+    grid-column: span 3 / auto;
+}
+.four{
+    grid-column: span 4 / auto;
+}
+.five{
+    grid-column: span 5 / auto;
+}
+.six{
+    grid-column: span 6 / auto;
+}
+.seven{
+    grid-column: span 7 / auto;
+}
+.eight{
+    grid-column: span 8 / auto;
+}
+.nine{
+    grid-column: span 9 / auto;
+}
+.ten{
+    grid-column: span 10 / auto;
+}
+.eleven{
+    grid-column: span 11 / auto;
+}
+.twelve{
+    grid-column: span 12 / auto;
+}
 @media screen and (max-width: 962px) {
+}
+@media screen and (max-width: 601px) {
+    .header{
+        font-size: 20px;
+    }
+    .five{
+        grid-column: span 12 / auto;
+    }
+    .four{
+        grid-column: span 12 / auto;
+    }
+    .thinger{
+        font-size: 30px;
+    }
     div.text{
         grid-column-start: 0;
         grid-column-end: 12;
     }
-}
-@media screen and (max-width: 601px) {
-    
+    #par{
+        font-size: 20px;
+    }
+    #ffs{
+        
+    }
 }
