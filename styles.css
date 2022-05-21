@@ -53,6 +53,9 @@ button.nav:hover{
 img.icon{
     -webkit-user-drag: none; 
     user-select: none; 
+    border: 5px double rgba(255, 87, 87, 0.493);
+    border-radius: 50%;
+    /*!Make cool shadows that change color and position lol idk might be cool*/
 }
 img.icon:hover{ 
     animation-duration: 1s;
