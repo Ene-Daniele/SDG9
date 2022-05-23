@@ -1,3 +1,6 @@
+html{
+    overflow-x: hidden; 
+}
 body{
     background-color: rgba(0, 0, 0, 0.85); 
     background-image: url("bgs/bg0.jpg"); 
@@ -5,39 +8,36 @@ body{
     background-size:cover; 
     background-attachment: fixed; 
 }
-html{
-    overflow-x: hidden; 
-}
-
 .top{
     margin-top: -10px;
     margin-left: -10px;
-    margin-right: -20px;
-    background-color: rgba(62, 62, 62, 0.85); 
-    padding-top: 1%;
+    margin-right: -20px; /* Adjusting margin to cover the top section */
+    padding-top: 1%; /* This is to lower the buttons a little bit */
     align-items: center; 
     text-align: center;
+    min-height: 100%; /* Keep the height consistent */
+    background-color: rgba(62, 62, 62, 0.85); 
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5); 
-    min-height: 50%; 
 }
 button.nav{
-    margin-left: 10px;
+    margin-left: 10px; /* Separate the buttons */
     width: 60px;
+    user-select: none; /* I dont want the user to be able to select these buttons */
     color: white; 
     background-color: rgba(0, 0, 0, 0);
-    border-style: none; 
-    user-select: none; 
+    border-style: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
-    border-bottom: 3px solid rgba(255, 0, 0, 0.70); 
+    border-bottom: 3px solid rgba(255, 0, 0, 0.70);
 }
-button.nav:hover{ 
+button.nav:hover{ /* On hover */
     color: darkgray; 
     border-bottom-color: rgba(94, 255, 0, 0.7); 
     animation-duration: 0.5s; 
     animation-name: colorpan;
     transform: translateY(5px); 
 }
+
 @keyframes colorpan{ 
     from{
         transform: translateY(0);
@@ -51,13 +51,12 @@ button.nav:hover{
    }
 }
 img.icon{
-    -webkit-user-drag: none; 
+    -webkit-user-drag: none; /* This only works sometimes like ??? */
     user-select: none; 
-    border: 5px double rgba(255, 87, 87, 0.493);
+    border: 5px dashed rgba(255, 87, 87, 0.493);
     border-radius: 50%;
-    /*!Make cool shadows that change color and position lol idk might be cool*/
 }
-img.icon:hover{ 
+img.icon:hover{ /* Spin!!! */
     animation-duration: 1s;
     animation-name: rot;
 }
@@ -73,25 +72,25 @@ p{
     user-select: none; 
     text-align: right; 
     color: white; 
+    text-shadow: 2px 2px rgba(255, 0, 0, 0.7); 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
-    text-shadow: 2px 2px rgba(255, 0, 0, 0.7); 
 }
 h1{
-    text-shadow:5px 5px rgba(255, 0, 43, 0.315);
+    text-align: center;
     user-select: none;
     color: rgb(255, 247, 189);
-    font-size: 30px;
-    text-align: center;
+    text-shadow:5px 5px rgba(255, 0, 43, 0.315);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
 }
 section.contentwrapper{ 
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(12, minmax(10px, 400px));
-    align-items: center;
+    gap: 1rem; /* Gap between columns */
+    grid-template-columns: repeat(12, minmax(10px, 1fr)); /* Make 12 columns */
     text-align: center;
     justify-content: center;
+    align-items: center; /* Overkill? nah */
 }
 div.text{
     grid-column-start: 2;
@@ -99,72 +98,36 @@ div.text{
 }
 div.titler{
     border-radius: 20px;
-    border-right: 5px solid red;
-    border-left: 5px solid red;
-    background-color: rgba(0, 0, 0, 0.616);
-    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 1);
     align-items: center;
     justify-content: center;
     text-align: center;
     padding-top: 10px;
+    border-right: 5px solid red;
+    border-left: 5px solid red;
+    background-color: rgba(0, 0, 0, 0.616);
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 1);
 }
 .thinger{
+    text-align: left;
+    position: relative;
+    left: 20px;
     text-shadow: 0px 0px rgba(0, 0, 0, 0);
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 60px;
     color: rgba(255, 255, 255, 0.4);
-    text-align: left;
-    position: relative;
-    left: 20px
-}
-div.card{
-    width: minmax(300px, 400px);
-}
-.one{
-    grid-column: span 1 / auto;
-}
-.two{
-    grid-column: span 2 / auto;
-}
-.three{
-    grid-column: span 3 / auto;
-}
-.four{
-    grid-column: span 4 / auto;
 }
 .five{
     grid-column: span 5 / auto;
 }
-.six{
-    grid-column: span 6 / auto;
-}
-.seven{
-    grid-column: span 7 / auto;
-}
-.eight{
-    grid-column: span 8 / auto;
-}
-.nine{
-    grid-column: span 9 / auto;
-}
-.ten{
-    grid-column: span 10 / auto;
-}
-.eleven{
-    grid-column: span 11 / auto;
-}
 .twelve{
     grid-column: span 12 / auto;
 }
-@media screen and (max-width: 962px) {ù
+@media screen and (max-width: 962px) {
     .header{
         font-size: 30px;
     }
     .five{
-        grid-column: span 12 / auto;
-    }
-    .four{
         grid-column: span 12 / auto;
     }
     .thinger{
@@ -199,7 +162,7 @@ div.card{
         font-size: 20px;
     }
 }
-@media screen and (max-width: 280px){
+@media screen and (max-width: 280px){ /* Fold media query */
     .header{
         font-size: 20px;
     }

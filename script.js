@@ -17,7 +17,7 @@ function bthree() {
 
 function bfour() {
     document.getElementById("body").style.backgroundImage = "none";
-    updateContent("About", "Not exactly sure if i should even put something here, well it took about 2 days to make, it was pretty much an uphill battle with css. It was still fun to make this website and i learned a lot of css.");
+    updateContent("Extra", "The Sustainable Development Goals or Global Goals are a collection of 17 interlinked global goals designed to be a 'blueprint to achieve a better and more sustainable future for all'. The SDGs were set up in 2015 by the United Nations General Assembly and are intended to be achieved by 2030");
 }
 
 function updateContent(title, content) { // Helper function to change text contents, thinking about it i couldve added a third parameter for the background
